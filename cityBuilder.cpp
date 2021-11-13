@@ -39,4 +39,6 @@ void City::printCity(){
         }
         std::cout << "  |" << std::endl;
     }
+
+    return;
 }
