@@ -1,11 +1,9 @@
 //  cityBuilder.hpp
-
 #include <iostream>
 
 class City{
     private:
         int* cityArray;
-
 
     protected:
         int size;
@@ -14,8 +12,4 @@ class City{
         City(int);
         void createCity();
         void printCity();
-        
-
-
-
 };

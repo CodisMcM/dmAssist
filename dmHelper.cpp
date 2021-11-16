@@ -1,8 +1,7 @@
 #include <iostream>
 #include <fstream>      // Temporary until I can host a database and use it instead. 
                         // Read and write from this file will do as a persistent data capture source especially if I use Github for version control and backups.
-#include "cityBuilder.hpp"
-
+#include "Headers/menuEntry.hpp"
 
 int main(int argc, char* argv[]){
 
@@ -25,8 +24,8 @@ int main(int argc, char* argv[]){
     
     dataFile.close();
 
-    City newCity()
-
+    MenuDialog mainMenu;
+    mainMenu.city->printCity();    
     
     return 0;
 }
