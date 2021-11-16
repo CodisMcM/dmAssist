@@ -10,7 +10,12 @@ MenuDialog::MenuDialog() {
 }
 
 void MenuDialog::displayMenu() {
-    cout << "menu displayed" << endl;
+    while (true)
+    {
+        return;
+    }
+    
+
 }
 
 
