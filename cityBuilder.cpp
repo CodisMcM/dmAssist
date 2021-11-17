@@ -1,5 +1,6 @@
 #include "Headers/cityBuilder.hpp"
 #include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 
@@ -7,17 +8,45 @@ using namespace std;
 
 
 City::City(int s) {
-    size = s*s;
+    size = s;
+    this->cityArray;
 }
 
+
 void City::createCity() {
-    //City* newCity = new City(size);
+    srand(time(NULL));
+    int array[size][size];  
+    for(int i = 0; i < size; i++) {
+        for(int j = 0; j < size; j++) {
+            array[i][j] = rand()%10;
+        }
+    }
+
+    for(int i = 0; i < size; i++) {
+        cityArray[i] = array[i];
+    }
+
     return;
 }
 
 
 void City::printCity() {
-    cout << "City" << endl;
+    cout << "|";
+    for(int i = 0; i < size; i++){
+        cout << "-";
+    }
+    cout << "|" << endl;
+    for(int i = 0; i < size; i++) {
+        for(int j = 0; j < size; j++) {
+            //cout << " " << cityArray[i][j] << " ";
+        }
+        //cout << " " << cityArray[i][j] << " ";
+        cout << "|" << endl;
+    }
+    for(int i = 0; i < size; i++){
+        cout << "-";
+    }
+    cout << "|" << endl;
     return;
 }
 

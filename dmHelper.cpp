@@ -8,15 +8,6 @@ int main(int argc, char* argv[]){
     std::ofstream dataFile;
     dataFile.open(argv[1]);
 
- 
-
-
-    //int* cityArray = new int[10];
-    //City newCity(size);
-
-   
-
-
     if(dataFile.is_open()){
         // dataFile << "Writing to the file";
     }else{std::cout << "Error Opening File!!" << std::endl;}
@@ -25,6 +16,8 @@ int main(int argc, char* argv[]){
     dataFile.close();
 
     MenuDialog mainMenu;
+    mainMenu.city = new City(10);
+    //mainMenu.city->createCity();
     mainMenu.city->printCity();    
     
     return 0;

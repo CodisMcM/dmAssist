@@ -3,13 +3,13 @@
 
 class City{
     private:
-        int* cityArray;
+        int** cityArray;
 
     protected:
         int size;
 
     public:
-        City(int);
+        City(int s);
         void createCity();
         void printCity();
 };
