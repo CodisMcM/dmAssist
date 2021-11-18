@@ -2,14 +2,16 @@
 #include <iostream>
 
 class City{
-    private:
-        int** cityArray;
+    
 
     protected:
         int size;
+    
+    private:
+        int** cityArray;
 
     public:
         City(int s);
-        void createCity();
+        void createCity(int height);
         void printCity();
 };

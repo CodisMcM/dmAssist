@@ -9,21 +9,19 @@ using namespace std;
 
 City::City(int s) {
     size = s;
-    this->cityArray;
+    cityArray = new int*[s];
+    for(int i = 0; i < s; i++){
+        cityArray[i] = new int[s];
+    }
 }
 
 
-void City::createCity() {
+void City::createCity(int height) {
     srand(time(NULL));
-    int array[size][size];  
     for(int i = 0; i < size; i++) {
         for(int j = 0; j < size; j++) {
-            array[i][j] = rand()%10;
+            cityArray[i][j] = rand()%height;
         }
-    }
-
-    for(int i = 0; i < size; i++) {
-        cityArray[i] = array[i];
     }
 
     return;
@@ -33,18 +31,19 @@ void City::createCity() {
 void City::printCity() {
     cout << "|";
     for(int i = 0; i < size; i++){
-        cout << "-";
+        cout << " - ";
     }
     cout << "|" << endl;
     for(int i = 0; i < size; i++) {
+        cout << "|";
         for(int j = 0; j < size; j++) {
-            //cout << " " << cityArray[i][j] << " ";
+            cout << " " << cityArray[i][j] << " ";
         }
-        //cout << " " << cityArray[i][j] << " ";
         cout << "|" << endl;
     }
+    cout << "|";
     for(int i = 0; i < size; i++){
-        cout << "-";
+        cout << " - ";
     }
     cout << "|" << endl;
     return;

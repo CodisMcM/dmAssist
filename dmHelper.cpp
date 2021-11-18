@@ -17,7 +17,7 @@ int main(int argc, char* argv[]){
 
     MenuDialog mainMenu;
     mainMenu.city = new City(10);
-    //mainMenu.city->createCity();
+    mainMenu.city->createCity(4);
     mainMenu.city->printCity();    
     
     return 0;
