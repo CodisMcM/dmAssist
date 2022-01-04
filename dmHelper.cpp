@@ -26,5 +26,7 @@ int main(int argc, char* argv[]){
 
 
 
-// Usage:           g++ -Wall dmHelper.cpp -o exe 
-//                  ./exe data.txt
+// Usage
+//              make
+//              ./a.out data/data.txt
+//              make clean
