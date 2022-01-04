@@ -1,7 +1,7 @@
 all: exe
 
 exe: 
-	g++ -Wall main.cpp mainMenu.cpp
+	g++ -std=c++11 -Wall main.cpp mainMenu.cpp
 
 
 
